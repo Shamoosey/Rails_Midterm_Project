@@ -7,8 +7,8 @@ Customer.destroy_all
 Beer.destroy_all
 Brewery.destroy_all
 
-breweries = File.read('/mnt/c/Users/Shamus/Documents/Rails_Midterm_Project/breweries.csv')
-beers = File.read('/mnt/c/Users/Shamus/Documents/Rails_Midterm_Project/beers.csv')
+breweries = File.read('breweries.csv')
+beers = File.read('beers.csv')
 
 csvBreweries = CSV.parse(breweries, headers: true)
 csvBeers = CSV.parse(beers, headers: true)
