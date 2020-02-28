@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'breweries/index'
-  get 'breweries/show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'beers/show'
+  resources :breweries, only: :show
+  root to: 'breweries#index'
+
+  get 'breweries/:id', to: 'breweries#show', id: /\d+/
 end
