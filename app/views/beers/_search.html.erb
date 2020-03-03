@@ -1,4 +1,6 @@
-<%= form_with(url: search_path, local: true, method: "get") do %>
-  <%= text_field_tag :search_term, nil, placeholder: 'Style of beer' %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class="is-block" style="margin-bottom: 25px">
+  <%= form_with(url: search_path, local: true, method: "get") do %>
+    <%= text_field_tag :search_term, nil, placeholder: 'Style of beer', class: 'control' %>
+    <%= submit_tag("Search", :class=>"control") %>
+  <% end %>
+</div>

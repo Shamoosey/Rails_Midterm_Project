@@ -1,1 +1,8 @@
-<p>Found <%= pluralize(@beers.size, 'result') %> for the search "<%= params[:search_term] %>".</p>
+
+<h4 class="title is-4">Found <%= pluralize(@beers.size, 'result') %> for the search "<%= params[:search_term] %>".</h2>
+
+<div class="columns is-multiline">
+   <%= render partial: 'beers/beer',
+              collection: @beers,
+              locals: {show_link: true} %>
+</div>
