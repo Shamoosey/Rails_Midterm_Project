@@ -1,0 +1,23 @@
+<h1>About</h1>
+<p>
+   The dataset I am using is a beer dataset. It contains beers from mainly North America and some parts of Europe.
+   It is structured in a JSON format with each beer having many fields.
+   I will have 3 tables, one table for the Brewery where the beer of produced, another table for the Beer and lastly a table for the Customer.
+</p>
+<p>
+   The table for Brewery will have columns for the ID, Name, Address, City, Country, State and Website.
+</p>
+<p>
+   The table for Customer will have columns for the ID, Name, Address, City, Country, State, Email and Beer.
+</p>
+<p>
+   The table for Beer will have columns for the ID, Name, IBU (International Bitterness Unit), Category, Description and Brewery.
+   It will have a one to many relation with the Brewery table, a beer can have one Brewery and a Brewery can have many beers.
+   It will also have a one to many relation with the Customer table, a customer has one favorite beer and a beer has many customers
+</p>
+<p>
+   I will be using the data pulled from online to create the Beer and Brewery tables.
+   Faker will be used to create the customer data.
+   Faker may be used for filling some missing fields in the Beer and Brewery tables.
+</p>
+<%= image_tag "ERD.png" %>
