@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root to: 'breweries#index'
 
+  get 'search', to: 'beers#search', as: 'search'
   get '/pages/:page' => 'pages#show'
   get 'breweries/:id', to: 'breweries#show', id: /\d+/
   get 'customer', to: 'customer#index'
