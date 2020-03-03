@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BreweriesController < ApplicationController
   def index
     @breweries = Brewery.order(:name)
@@ -5,5 +7,6 @@ class BreweriesController < ApplicationController
 
   def show
     @brewery = Brewery.find(params[:id])
+    @brewerybeers = Beer.where(brewery_id: params[:id]).select(:name, :category).order(:category)
   end
 end
