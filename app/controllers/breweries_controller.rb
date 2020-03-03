@@ -7,6 +7,6 @@ class BreweriesController < ApplicationController
 
   def show
     @brewery = Brewery.find(params[:id])
-    @brewerybeers = Beer.where(brewery_id: params[:id]).select(:name, :category).order(:category)
+    @brewerybeers = Beer.where(brewery_id: params[:id]).select(:name, :category, :id).order(:category)
   end
 end

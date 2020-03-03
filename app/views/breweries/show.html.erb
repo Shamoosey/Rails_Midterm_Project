@@ -1,5 +1,5 @@
 <h1><%=  @brewery.name  %>'s Beers</h1>
 <% @brewerybeers.each do |beer|%>
-   <h3><%=  beer.name  %></h3>
+   <h3><%= link_to beer.name, beer %></h3>
    <p><%= beer.category %></p>
 <% end %>

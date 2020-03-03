@@ -3,6 +3,7 @@
 Rails.application.routes.draw do
   resources :breweries, only: :show
   resources :customer, only: :show
+  resources :beers, only: :show
 
   root to: 'breweries#index'
 
