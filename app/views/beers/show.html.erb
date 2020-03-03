@@ -1,4 +1,4 @@
-<h1><%= @beer.name %></h1>
+<h2 class="subtitle is-4"><%= @beer.name %></h2>
 <h2>Type: <%= @beer.category %></h2>
 <h2>
 IBU:
@@ -9,3 +9,4 @@ IBU:
 <%end%>
 </h2>
 <h2>ABV: <%= @beer.abv %></h2>
+<h2>Brewery: <%= link_to @beer.brewery.name, @beer.brewery %></h2>

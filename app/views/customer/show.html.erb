@@ -1,1 +1,4 @@
-<h1><%=  @customer.name %></h1>
+<h1><%= @customer.name %></h1>
+<h2>Address: <%= @customer.address %>, <%= @customer.city %>, <%= @customer.state%>, <%= @customer.country %></h2>
+<h2>Email: <%= @customer.email %></h2>
+<h2>Favorite Beer: <%= link_to @customer.beer.name, @customer.beer%></h2>

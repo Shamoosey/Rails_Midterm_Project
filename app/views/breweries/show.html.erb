@@ -1,5 +1,16 @@
-<h1><%=  @brewery.name  %>'s Beers</h1>
-<% @brewerybeers.each do |beer|%>
-   <h3><%= link_to beer.name, beer %></h3>
-   <p><%= beer.category %></p>
-<% end %>
+<h2 class="subtitle is-4"><%=@brewery.name%>'s Beers</h2>
+<h2 class="subtitle">Address: <%=@brewery.address%>, <%=@brewery.city%>, <%=@brewery.state%> <%=@brewery.country%></h2>
+<div class="columns is-multiline">
+   <% @brewerybeers.each do |beer|%>
+      <div class="column is-one-quarter">
+         <div class="card">
+            <header class="card-header">
+               <p class="card-header-title"><%= link_to beer.name, beer %></p>
+            </header>
+            <div class="card-content">
+               <div class="content"> Type: <%= beer.category %></div>
+            </div>
+         </div>
+      </div>
+   <% end %>
+</div>
