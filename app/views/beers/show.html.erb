@@ -1,1 +1,11 @@
 <h1><%= @beer.name %></h1>
+<h2>Type: <%= @beer.category %></h2>
+<h2>
+IBU:
+<%if @beer.ibu? %>
+   <%= @beer.ibu%>
+<%else%>
+   Unknown
+<%end%>
+</h2>
+<h2>ABV: <%= @beer.abv %></h2>
