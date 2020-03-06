@@ -15,19 +15,19 @@
   <footer class="card-footer">
     <p class="card-footer-item">
       <span>
-        ABV: <%= beer.abv %>
+        ABV:<br/><%= beer.abv %>
       </span>
     </p>
     <% if beer.ibu? %>
     <p class="card-footer-item">
       <span>
-        IBU: <%= beer.ibu %>
+        IBU:<br/><%= beer.ibu %>
       </span>
     </p>
     <% end %>
     <p class="card-footer-item">
       <span>
-        Brewer: <%= link_to beer.brewery.name, beer.brewery %></a>
+        Brewer:<br/><%= link_to beer.brewery.name, beer.brewery %></a>
       </span>
     </p>
   </footer>
