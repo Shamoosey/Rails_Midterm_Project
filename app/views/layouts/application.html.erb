@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Breweries</title>
     <%= csrf_meta_tags %>
@@ -14,8 +14,13 @@
     <section class="section">
       <div class="container">
         <header>
-          <h1 class="title is-2"><%= link_to 'Craft Beer Directory', root_path %></h1>
-          <h2 class="subtitle is-4 is-spaced"><%= link_to "About", {:controller => 'pages', :action => 'about' }%></h2>
+          <aside class="menu">
+            <h2 class="title is-2 menu-label"><%= link_to 'Craft Beer Directory', root_path %></h2>
+            <ul class="menu-list">
+              <li><h2 class="subtitle is-5"><%= link_to "About", :controller => 'pages', :action => 'about' %></li></h2>
+              <li><h2 class="subtitle is-5"><%= link_to "Customers", :controller => 'customer', :action => 'index' %></li></h2>
+            </ul>
+          </aside>
         </header>
         <br/>
         <%= render partial: 'beers/search' %>
